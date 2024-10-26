@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #recuadro1 {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background: white;
+            margin: 50px;
+        }
+        /*codigo extra para que todas las imagenes sean iguales*/
+        #imagen{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="recuadro1">
+        <img src="niños.jpg" id="imagen" alt="Imagen de niños"> <br><br>
+        <button onclick="cambioImagen('Anime 1');">Anime 1</button> 
+        <button onclick="cambioImagen('Anime 2');">Anime 2</button>
+        <button onclick="cambioImagen('Anime 3');">Anime 3</button>
+        <button onclick="cambioImagen('Anime 4');">Anime 4</button>
+    </div>
+
+    <script type="text/javascript">
+        function cambioImagen(img_Anime) {
+            var elemento = document.getElementById("imagen");
+            
+            if (img_Anime === "Anime 1") { 
+                elemento.src = "niños.jpg";
+            } else if (img_Anime === "Anime 2") {
+                elemento.src = "amor.jpg";
+            } else if (img_Anime === "Anime 3") {
+                elemento.src = "duo.jpg";
+            } else if (img_Anime === "Anime 4") { 
+                elemento.src = "amigos.jpg" ;
+            }
+        }
+    </script>
+</body>
+</html>
